@@ -11,11 +11,18 @@
 }
 
 .search_box {
-  max-width: 1000px;
+  max-width: 80%;
   background: #29a5d8;
   margin: 0 auto;
   padding: 25px 0 50px;
   border-radius: 3px;
+  position: relative;
+}
+
+wiki-loading {
+  position: absolute;
+  top: 35px;
+  right: 10px;
 }
 
 .search_box input {
