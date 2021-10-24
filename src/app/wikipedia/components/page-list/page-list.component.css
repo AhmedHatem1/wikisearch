@@ -7,13 +7,17 @@
   display: flex;
   background: #fff;
   padding: 15px 0;
-  height: 50px;
 }
 
 .table_wrap ul li .item .title,
 .table_wrap ul li .item .word-count {
   width: 25%;
   padding: 0 15px;
+}
+
+.page-link {
+  color: #29a5d8;
+  text-decoration: none;
 }
 
 .table_wrap ul li .item .status {
@@ -30,9 +34,10 @@
 .table_wrap ul li .item .title span {
   width: 90%;
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+.table_wrap ul li .item .snippet span {
+  line-height: 25px;
 }
 
 .table_header ul li .item {
@@ -42,9 +47,19 @@
 
 .table_body {
   height: 300px;
-  overflow: auto;
 }
 
 .table_body ul li .item {
   border-bottom: 1px solid #efefef;
+}
+
+:host ::ng-deep .searchmatch {
+  font-weight: bold;
+}
+
+.result div {
+  margin: 16px auto;
+  width: 80%;
+  background: #f9f9f9;
+  padding: 30px;
 }

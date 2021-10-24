@@ -1,4 +1,4 @@
-<div class="table_wrap">
+<div class="table_wrap" *ngIf="pages.length && !error">
   <div class="table_header">
     <ul>
       <li>
@@ -18,20 +18,35 @@
   </div>
   <div class="table_body">
     <ul>
-      <li>
+      <li *ngFor="let page of pages">
         <div class="item">
           <div class="title">
-            <span>Javascript</span>
+            <span>
+              <a class="page-link" [href]="'https://en.wikipedia.org?curid='+page.pageid"
+                target="_blank">{{page.title}}</a>
+            </span>
           </div>
           <div class="word-count">
-            <span>4564</span>
+            <span>{{page.wordcount}}</span>
           </div>
           <div class="snippet">
-            <span>Lorem ipsum dolor sit amet.</span>
+            <span [innerHTML]="page.snippet"></span>
           </div>
         </div>
       </li>
     </ul>
   </div>
   <div class="table_footer"></div>
+</div>
+
+<div *ngIf="error" class="result">
+  <div>
+    There is an error
+  </div>
+</div>
+
+<div *ngIf="!error && !pages.length" class="result">
+  <div>
+    No data found
+  </div>
 </div>

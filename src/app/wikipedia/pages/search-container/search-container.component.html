@@ -1,2 +1,2 @@
-<wiki-search-bar></wiki-search-bar>
-<wiki-page-list></wiki-page-list>
+<wiki-search-bar (onSearchComplete)="getPageList($event)"></wiki-search-bar>
+<wiki-page-list [pages]="pages"></wiki-page-list>

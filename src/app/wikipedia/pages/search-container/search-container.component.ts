@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-container.component.css']
 })
 export class SearchContainerComponent implements OnInit {
+  pages = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getPageList(pages) {
+    this.pages = pages;
+  }
 }
